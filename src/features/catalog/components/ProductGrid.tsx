@@ -8,7 +8,6 @@ interface Product {
   name: string;
   price: number;
   category: string;
-  image: string;
   modelUrl?: string;
 }
 
@@ -18,64 +17,14 @@ const allProducts: Product[] = [
     name: 'Anubis Guardian',
     price: 299,
     category: 'egyptian',
-    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop',
     modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
   },
   {
-    id: 2,
-    name: 'Zeus Thunderer',
-    price: 349,
-    category: 'greek',
-    image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-  },
-  {
-    id: 3,
-    name: 'Naruto Sage Mode',
-    price: 199,
-    category: 'anime',
-    image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-  },
-  {
-    id: 4,
-    name: 'Mayan Sun God',
-    price: 279,
-    category: 'mayan',
-    image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-  },
-  {
-    id: 5,
-    name: 'Corgi Champion',
-    price: 149,
-    category: 'pets',
-    image: 'https://images.unsplash.com/photo-1452378174528-3090a4bba7b2?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-  },
-  {
-    id: 6,
-    name: 'Horus Rising',
-    price: 329,
-    category: 'egyptian',
-    image: 'https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-  },
-  {
-    id: 7,
-    name: 'Athena Wisdom',
-    price: 399,
-    category: 'greek',
-    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-  },
-  {
-    id: 8,
-    name: 'Goku Ultra Instinct',
+    id: 9,
+    name: 'Random',
     price: 249,
-    category: 'anime',
-    image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=400&fit=crop',
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
+    category: 'random',
+    modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1768612521/test_ffkpsd.glb',
   },
 ];
 

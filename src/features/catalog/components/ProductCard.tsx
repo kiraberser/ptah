@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingCart, Eye, Heart } from 'lucide-react';
+import { ShoppingCart, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Product {
@@ -10,7 +10,6 @@ interface Product {
   name: string;
   price: number;
   category: string;
-  image: string;
   modelUrl?: string;
 }
 
@@ -22,7 +21,6 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, onAddToCart, index }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [showModel, setShowModel] = useState(false);
   const [isModelViewerLoaded, setIsModelViewerLoaded] = useState(false);
 
   useEffect(() => {
@@ -45,12 +43,9 @@ const ProductCard = ({ product, onAddToCart, index }: ProductCardProps) => {
       className="group relative"
     >
       <div className="card-surface rounded-md overflow-hidden card-hover">
-        {/* Image / Model Container */}
-        <div 
-          className="relative aspect-square overflow-hidden cursor-pointer"
-          onClick={() => setShowModel(!showModel)}
-        >
-          {showModel && product.modelUrl && isModelViewerLoaded ? (
+        {/* Model Container */}
+        <div className="relative aspect-square overflow-hidden bg-secondary/30">
+          {product.modelUrl && isModelViewerLoaded ? (
             // @ts-ignore - model-viewer is a custom element
             <model-viewer
               src={product.modelUrl}
@@ -60,15 +55,14 @@ const ProductCard = ({ product, onAddToCart, index }: ProductCardProps) => {
               shadow-intensity="1"
               className="w-full h-full"
             />
+          ) : product.modelUrl ? (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-muted-foreground text-sm">Cargando modelo...</div>
+            </div>
           ) : (
-            <>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-            </>
+            <div className="w-full h-full flex items-center justify-center bg-secondary/50">
+              <div className="text-muted-foreground text-sm">Sin modelo disponible</div>
+            </div>
           )}
 
           {/* Quick Actions */}
@@ -83,17 +77,6 @@ const ProductCard = ({ product, onAddToCart, index }: ProductCardProps) => {
               className="card-surface hover:bg-primary hover:text-primary-foreground transition-colors"
             >
               <Heart className="w-4 h-4" />
-            </Button>
-            <Button
-              size="icon"
-              variant="secondary"
-              className="card-surface hover:bg-primary hover:text-primary-foreground transition-colors"
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowModel(!showModel);
-              }}
-            >
-              <Eye className="w-4 h-4" />
             </Button>
           </motion.div>
 

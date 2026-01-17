@@ -11,6 +11,7 @@ const categories = [
   { id: 'anime', name: 'Anime', icon: Sparkles },
   { id: 'mayan', name: 'Maya', icon: Skull },
   { id: 'pets', name: 'Perros y Gatos', icon: Dog },
+  {id: 'random', name: 'Random', icon: Sparkles },
 ];
 
 interface CategoriesProps {
