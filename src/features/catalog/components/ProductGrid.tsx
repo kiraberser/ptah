@@ -26,6 +26,13 @@ const allProducts: Product[] = [
     category: 'random',
     modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1768612521/test_ffkpsd.glb',
   },
+  {
+    id: 10,
+    name: 'Marcus Aurelius',
+    price: 249,
+    category: 'random',
+    modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1768962348/marcus-aurelius-draco_yyv50o.glb',
+  },
 ];
 
 interface ProductGridProps {
