@@ -30,7 +30,7 @@ const allProducts: Product[] = [
     id: 10,
     name: 'Marcus Aurelius',
     price: 249,
-    category: 'random',
+    category: 'greek',
     modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1768962348/marcus-aurelius-draco_yyv50o.glb',
   },
 ];

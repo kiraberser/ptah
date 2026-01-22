@@ -52,7 +52,9 @@ const ProductCard = ({ product, onAddToCart, index }: ProductCardProps) => {
               alt={product.name}
               auto-rotate
               camera-controls
-              shadow-intensity="1"
+              shadow-intensity="0.4"
+              exposure="0.6"
+              tone-mapping="neutral"
               className="w-full h-full"
             />
           ) : product.modelUrl ? (

@@ -55,7 +55,7 @@ const Contact = () => {
 
             <div className="space-y-4">
               {[
-                { icon: '📍', text: 'Ciudad de México, México (Remoto Mundial)' },
+                { icon: '📍', text: 'Martinez de la Torre, Veracruz' },
                 { icon: '📧', text: 'hola@ptah.design' },
                 { icon: '⏰', text: 'Respuesta en menos de 24 horas' },
               ].map((item, index) => (
