@@ -14,9 +14,9 @@ interface Product {
 const allProducts: Product[] = [
   {
     id: 1,
-    name: 'Anubis Guardian',
+    name: 'Astronaut',
     price: 299,
-    category: 'egyptian',
+    category: 'random',
     modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
   },
   {
