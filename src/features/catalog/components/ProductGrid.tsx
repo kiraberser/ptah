@@ -33,6 +33,13 @@ const allProducts: Product[] = [
     category: 'greek',
     modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1768962348/marcus-aurelius-draco_yyv50o.glb',
   },
+  {
+    id: 11,
+    name: 'Luffy - One Piece',
+    price: 299,
+    category: 'anime',
+    modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1769127383/one-piece2_arnlmh.glb',
+  },
 ];
 
 interface ProductGridProps {
