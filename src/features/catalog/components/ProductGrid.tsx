@@ -38,7 +38,7 @@ const allProducts: Product[] = [
     name: 'Luffy - One Piece',
     price: 299,
     category: 'anime',
-    modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1769127383/one-piece2_arnlmh.glb',
+    modelUrl: 'https://res.cloudinary.com/refaccionaria-vega/image/upload/v1769128494/one-piece2_arnlmh.glb',
   },
 ];
 
